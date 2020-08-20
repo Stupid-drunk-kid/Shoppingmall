@@ -21,7 +21,6 @@
 <style scoped>
   .navigation {
     display: flex;
-    /*height: 44px;*/
     line-height: 44px;
     text-align: center;
   }
@@ -31,6 +30,5 @@
   }
   .navigationbar_center{
     flex: 1;
-
   }
 </style>

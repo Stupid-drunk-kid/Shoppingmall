@@ -3,7 +3,7 @@
       <swiper>
           <el-carousel-item v-for="item in banners" :key="item.amc">
             <a :href="item.link">
-              <img :src="item.image" alt="">
+              <img :src="item.image" alt="" @load="imgLoad">
             </a>
           </el-carousel-item>
 
@@ -23,8 +23,20 @@
             }
           }
         },
+        data() {
+          return {
+            isImageLoad: false
+          }
+        },
         components: {
           Swiper
+        },
+        methods: {
+          imgLoad() {
+            if (!this.isImageLoad)
+              this.$emit('imgLoad')
+              this.isImageLoad = true
+          }
         }
     }
 </script>
@@ -33,7 +45,6 @@
   .swiper-home img {
     height: 100%;
     width: 100%;
-    margin-top: 44px;
   }
 
 </style>

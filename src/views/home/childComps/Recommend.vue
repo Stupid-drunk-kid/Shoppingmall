@@ -2,7 +2,7 @@
   <div class="cecommend">
     <div v-for="item in recommend" :key="item.amc" class="cecommend-item">
       <a :href="item.link">
-        <img :src="item.image" alt="">
+        <img :src="item.image" alt="" >
       </a>
       <div>{{item.title}}</div>
     </div>
@@ -29,9 +29,10 @@
     width: 100%;
     display: flex;
     text-align: center;
-    padding: 20px 0 30px 0;
-    border: 8px solid #eee;
+    margin-top: 30px;
+    margin-bottom: 20px;
     font-size: 14px;
+    color: black;
   }
   .cecommend-item {
     flex: 1;

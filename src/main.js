@@ -7,9 +7,11 @@ Vue.use(Element, { size: 'small', zIndex: 3000 });
 
 Vue.use(Element);
 
-
-
 Vue.config.productionTip = false
+
+//事件总线
+Vue.prototype.$bus = new Vue()
+
 
 new Vue({
   render: h => h(App),
